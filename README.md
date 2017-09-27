@@ -1,4 +1,4 @@
 
 # mock-api
-- Basic back end api for tutorial/practice purposes.
-- This api will contain no database functions.
+- Basic back end API for tutorial/practice purposes.
+- This API will not contain database functions.
