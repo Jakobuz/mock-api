@@ -61,7 +61,14 @@ $app->post('/post', function(Request $request, Response $response){
   return $response;
 });
 
-$app->post('/user_posts', function(Request $request, Response $response){
+$app->post('/user-posts', function(Request $request, Response $response){
   $user_id = $request->getParam('user_id');
   $posts = get_posts($user_id);
+  $data = array();
+
+  $posts = get_posts($user_id);
+  $data['posts'] = $posts;
+
+  $response = $response->withJson($data);
+  return $response;
 });
